@@ -13,7 +13,7 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AddIcon from "@mui/icons-material/Add";
 import SidebarOption from "./SidebarOption";
-import db from "./firebase.js";
+import db from "./firebase";
 
 function Sidebar() {
   const [channels, setChannels] = useState([]);
@@ -53,7 +53,6 @@ function Sidebar() {
       <SidebarOption Icon={ExpandMoreIcon} title="Channels" />
       <hr />
       <SidebarOption Icon={AddIcon} title="Add Channel" />
-
       {channels.map((channel) => (
         <SidebarOption title={channel.name} id={channel.id} />
       ))}
